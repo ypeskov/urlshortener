@@ -29,11 +29,6 @@ def create_url(db: Session, url: url_schemas.UrlCreate) -> Union[Url, None]:
         db.refresh(db_url)
     except IntegrityError as err:
         db.rollback()
-        print('++++++++++++=')
-        print('++++++++++++=')
-        print('++++++++++++=')
-        print('++++++++++++=')
-        print('++++++++++++=')
         return None
 
     return db_url

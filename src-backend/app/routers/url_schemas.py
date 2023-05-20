@@ -13,9 +13,10 @@ class UrlCreate(UrlBase):
 
 class UrlResponse(UrlBase):
     id: int
-    short_url_prefix: str = '/urls/r'
+    short_url_prefix: str
     short_url_path: Optional[str]
     full_url: str
+    short_url: str
     success: bool = True
 
     class Config:

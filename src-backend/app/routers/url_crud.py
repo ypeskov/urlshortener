@@ -1,4 +1,5 @@
 from pprint import pprint
+from typing import Type
 
 from sqlalchemy.orm import Session
 
@@ -10,7 +11,7 @@ from ..models.url import Url
 #     return db.query(Url).filter(Url.id == test_id).first()
 
 
-def get_url_by_short(db: Session, short_url: str):
+def get_url_by_short(db: Session, short_url: str) -> Type[Url] | None:
     return db.query(Url).filter(Url.short_url == short_url).first()
 
 

@@ -18,9 +18,9 @@ def generate_short_id(num_of_chars: int):
     return ''.join(choice(string.ascii_letters + string.digits) for _ in range(num_of_chars))
 
 
-def create_url(db: Session, url: url_schemas.UrlCreate) -> Union[Url, None]:
+def create_url(db: Session, url: str) -> Union[Url, None]:
     random_str = generate_short_id(5)
-    db_url = Url(full_url=url.full_url,
+    db_url = Url(full_url=url,
                  short_url_prefix='',
                  short_url_path=random_str)
     db.add(db_url)

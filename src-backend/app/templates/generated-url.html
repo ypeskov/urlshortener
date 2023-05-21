@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div>
+        Please use this URL: <a href="{{ short_url }}">{{ short_url }}</a>
+    </div>
+    <div>
+        <a href="{{ url_for('add_url') }}">Make new URL</a>
+    </div>
+{% endblock %}

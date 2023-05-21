@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <form method="post" action="{{ url_for('generated_url') }}">
+        <div>
+            Enter URL: <input type="text" name="full_url" />
+        </div>
+        <div>
+            <button type="submit">Generate short URL</button>
+        </div>
+    </form>
+{% endblock %}

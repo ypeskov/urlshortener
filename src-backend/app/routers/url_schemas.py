@@ -21,8 +21,3 @@ class UrlResponse(UrlBase):
 
     class Config:
         orm_mode = True
-
-class ErrorGenerateShortUrl(BaseModel):
-    success: bool = False
-    msg: str = 'Error while generation short URL'
-    code: int = 450
